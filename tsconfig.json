@@ -8,6 +8,7 @@
         "moduleResolution": "node",
         "removeComments": false,
         "suppressImplicitAnyIndexErrors": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "declaration": true
     }
 }

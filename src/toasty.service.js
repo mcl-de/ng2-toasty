@@ -1,15 +1,6 @@
 // Copyright (C) 2016 Sergey Akopkokhyants
 // This project is licensed under the terms of the MIT license.
 // https://github.com/akserg/ng2-toasty
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { Injectable, EventEmitter } from '@angular/core';
 import { isString, isNumber, isFunction } from './toasty.utils';
 /**
@@ -30,10 +21,11 @@ export var ToastyConfig = (function () {
         // default, material or bootstrap
         this.theme = 'default';
     }
-    ToastyConfig = __decorate([
-        Injectable(), 
-        __metadata('design:paramtypes', [])
-    ], ToastyConfig);
+    ToastyConfig.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    ToastyConfig.ctorParameters = [];
     return ToastyConfig;
 }());
 /**
@@ -170,10 +162,13 @@ export var ToastyService = (function () {
     };
     // Allowed THEMES
     ToastyService.THEMES = ['default', 'material', 'bootstrap'];
-    ToastyService = __decorate([
-        Injectable(), 
-        __metadata('design:paramtypes', [ToastyConfig])
-    ], ToastyService);
+    ToastyService.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    ToastyService.ctorParameters = [
+        { type: ToastyConfig, },
+    ];
     return ToastyService;
 }());
 //# sourceMappingURL=toasty.service.js.map

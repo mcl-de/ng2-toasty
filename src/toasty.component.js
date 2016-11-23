@@ -1,15 +1,6 @@
 // Copyright (C) 2016 Sergey Akopkokhyants
 // This project is licensed under the terms of the MIT license.
 // https://github.com/akserg/ng2-toasty
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { Component, Input } from '@angular/core';
 import { isFunction } from './toasty.utils';
 import { ToastyService, ToastyConfig } from './toasty.service';
@@ -144,18 +135,20 @@ export var ToastyComponent = (function () {
      * Set of constants defins position of Toasty on the page.
      */
     ToastyComponent.POSITIONS = ['bottom-right', 'bottom-left', 'top-right', 'top-left', 'top-center', 'bottom-center', 'center-center'];
-    __decorate([
-        Input(), 
-        __metadata('design:type', String), 
-        __metadata('design:paramtypes', [String])
-    ], ToastyComponent.prototype, "position", null);
-    ToastyComponent = __decorate([
-        Component({
-            selector: 'ng2-toasty',
-            template: "\n    <div id=\"toasty\" [ngClass]=\"[position]\">\n        <ng2-toast *ngFor=\"let toast of toasts\" [toast]=\"toast\" (closeToast)=\"closeToast(toast)\"></ng2-toast>\n    </div>"
-        }), 
-        __metadata('design:paramtypes', [ToastyConfig, ToastyService])
-    ], ToastyComponent);
+    ToastyComponent.decorators = [
+        { type: Component, args: [{
+                    selector: 'ng2-toasty',
+                    template: "\n    <div id=\"toasty\" [ngClass]=\"[position]\">\n        <ng2-toast *ngFor=\"let toast of toasts\" [toast]=\"toast\" (closeToast)=\"closeToast(toast)\"></ng2-toast>\n    </div>"
+                },] },
+    ];
+    /** @nocollapse */
+    ToastyComponent.ctorParameters = [
+        { type: ToastyConfig, },
+        { type: ToastyService, },
+    ];
+    ToastyComponent.propDecorators = {
+        'position': [{ type: Input },],
+    };
     return ToastyComponent;
 }());
 //# sourceMappingURL=toasty.component.js.map
