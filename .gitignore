@@ -14,12 +14,18 @@ bundles/*.*
 src/*.js
 src/*.d.ts
 src/*.js.map
+src/*.ngfactory.ts
+src/*.metadata.json
 tests/*.js
 tests/*.d.ts
 tests/*.js.map
 index.js
 index.d.ts
 index.js.map
+index.metadata.json
+index.ngfactory.ts
+index.ngfactory.js
+index.ngfactory.js.map
 _test-output
 
 #################
@@ -47,4 +53,3 @@ Desktop.ini
 
 # Mac crap
 .DS_Store
-

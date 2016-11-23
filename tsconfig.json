@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
         "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "ES5",
+        "module": "es2015",
+        "target": "es5",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "declaration": true,
         "moduleResolution": "node",
+        "removeComments": false,
+        "suppressImplicitAnyIndexErrors": true,
         "sourceMap": true
     }
 }
