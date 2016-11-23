@@ -10,9 +10,6 @@ npm-debug.log
 coverage
 dist
 typings
-tests/*.js
-tests/*.d.ts
-tests/*.js.map
 _test-output
 
 #################
