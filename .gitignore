@@ -11,6 +11,7 @@ coverage
 dist
 typings
 bundles/*.*
+!src
 src/*.js
 src/*.d.ts
 src/*.js.map
