@@ -1,19 +1,22 @@
+"use strict";
 /**
  * Check and return true if an object is type of string
  */
-export function isString(obj) {
+function isString(obj) {
     return typeof obj === "string";
 }
+exports.isString = isString;
 /**
  * Check and return true if an object is type of number
  */
-export function isNumber(obj) {
+function isNumber(obj) {
     return typeof obj === "number";
 }
+exports.isNumber = isNumber;
 /**
  * Check and return true if an object is type of Function
  */
-export function isFunction(obj) {
+function isFunction(obj) {
     return typeof obj === "function";
 }
-//# sourceMappingURL=toasty.utils.js.map
+exports.isFunction = isFunction;

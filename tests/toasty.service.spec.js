@@ -1,21 +1,22 @@
-import { inject, TestBed } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
-import { ToastyService, ToastyConfig } from '../src/toasty.service';
+"use strict";
+var testing_1 = require('@angular/core/testing');
+var Observable_1 = require('rxjs/Observable');
+var toasty_service_1 = require('../src/toasty.service');
 describe('ToastyService', function () {
     beforeEach(function () {
-        TestBed.configureTestingModule({
-            providers: [ToastyService, ToastyConfig]
+        testing_1.TestBed.configureTestingModule({
+            providers: [toasty_service_1.ToastyService, toasty_service_1.ToastyConfig]
         });
     });
-    it('is defined', inject([ToastyService], function (service) {
-        expect(ToastyService).toBeDefined();
-        expect(service instanceof ToastyService).toBeTruthy();
+    it('is defined', testing_1.inject([toasty_service_1.ToastyService], function (service) {
+        expect(toasty_service_1.ToastyService).toBeDefined();
+        expect(service instanceof toasty_service_1.ToastyService).toBeTruthy();
     }));
-    it('should return Observable from getToasts method', inject([ToastyService], function (service) {
-        expect(service.getToasts instanceof Observable);
+    it('should return Observable from getToasts method', testing_1.inject([toasty_service_1.ToastyService], function (service) {
+        expect(service.getToasts instanceof Observable_1.Observable);
     }));
     describe('create default toasty', function () {
-        it('with string title', inject([ToastyService], function (service) {
+        it('with string title', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -30,7 +31,7 @@ describe('ToastyService', function () {
             });
             service.default('Hi');
         }));
-        it('with number title', inject([ToastyService], function (service) {
+        it('with number title', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -45,7 +46,7 @@ describe('ToastyService', function () {
             });
             service.default(1000);
         }));
-        it('with ToastyOptions', inject([ToastyService], function (service) {
+        it('with ToastyOptions', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // Create options
             var options = {
                 title: 'Title',
@@ -65,7 +66,7 @@ describe('ToastyService', function () {
             });
             service.default(options);
         }));
-        it('and call onAdd function', inject([ToastyService], function (service) {
+        it('and call onAdd function', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // Create options
             var options = {
                 title: 'Title',
@@ -88,7 +89,7 @@ describe('ToastyService', function () {
         }));
     });
     describe('create toasty', function () {
-        it('of info type', inject([ToastyService], function (service) {
+        it('of info type', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -103,7 +104,7 @@ describe('ToastyService', function () {
             });
             service.info('Hi');
         }));
-        it('of success type', inject([ToastyService], function (service) {
+        it('of success type', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -118,7 +119,7 @@ describe('ToastyService', function () {
             });
             service.success('Hi');
         }));
-        it('of wait type', inject([ToastyService], function (service) {
+        it('of wait type', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -133,7 +134,7 @@ describe('ToastyService', function () {
             });
             service.wait('Hi');
         }));
-        it('of error type', inject([ToastyService], function (service) {
+        it('of error type', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -148,7 +149,7 @@ describe('ToastyService', function () {
             });
             service.error('Hi');
         }));
-        it('of warning type', inject([ToastyService], function (service) {
+        it('of warning type', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             // We listen our service to recieve new toasts from it
             service.getToasts().subscribe(function (toast) {
                 expect(toast).not.toBeNull();
@@ -165,7 +166,7 @@ describe('ToastyService', function () {
         }));
     });
     describe('create toasty', function () {
-        it('of material theme', inject([ToastyService], function (service) {
+        it('of material theme', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             var options = {
                 title: 'Title',
                 msg: 'message',
@@ -185,7 +186,7 @@ describe('ToastyService', function () {
             });
             service.default(options);
         }));
-        it('of bootstrap theme', inject([ToastyService], function (service) {
+        it('of bootstrap theme', testing_1.inject([toasty_service_1.ToastyService], function (service) {
             var options = {
                 title: 'Title',
                 msg: 'message',
@@ -207,4 +208,3 @@ describe('ToastyService', function () {
         }));
     });
 });
-//# sourceMappingURL=toasty.service.spec.js.map

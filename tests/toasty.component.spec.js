@@ -1,7 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import { ToastyService, ToastyConfig } from '../src/toasty.service';
-import { ToastyComponent } from '../src/toasty.component';
-import { ToastComponent } from '../src/toast.component';
+"use strict";
+var testing_1 = require('@angular/core/testing');
+var toasty_service_1 = require('../src/toasty.service');
+var toasty_component_1 = require('../src/toasty.component');
+var toast_component_1 = require('../src/toast.component');
 describe('ToastyComponent', function () {
     var componentFixture;
     var toast1 = {
@@ -29,14 +30,14 @@ describe('ToastyComponent', function () {
         onClick: null
     };
     beforeEach(function () {
-        TestBed.configureTestingModule({
-            declarations: [ToastComponent, ToastyComponent],
-            providers: [ToastyService, ToastyConfig]
+        testing_1.TestBed.configureTestingModule({
+            declarations: [toast_component_1.ToastComponent, toasty_component_1.ToastyComponent],
+            providers: [toasty_service_1.ToastyService, toasty_service_1.ToastyConfig]
         });
-        TestBed.compileComponents();
+        testing_1.TestBed.compileComponents();
     });
     beforeEach(function () {
-        componentFixture = TestBed.createComponent(ToastyComponent);
+        componentFixture = testing_1.TestBed.createComponent(toasty_component_1.ToastyComponent);
         componentFixture.detectChanges();
     });
     it('should be defined', function () {
@@ -142,4 +143,3 @@ describe('ToastyComponent', function () {
     //     ));
     // });
 });
-//# sourceMappingURL=toasty.component.spec.js.map

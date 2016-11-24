@@ -1,14 +1,17 @@
 {
     "compilerOptions": {
         "noImplicitAny": true,
-        "module": "es2015",
+        "module": "commonjs",
         "target": "es5",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "removeComments": false,
         "suppressImplicitAnyIndexErrors": true,
-        "sourceMap": true,
+        "sourceMap": false,
         "declaration": true
+    },
+    "angularCompilerOptions": {
+        "skipMetadataEmit" : true
     }
 }

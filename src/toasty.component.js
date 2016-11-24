@@ -1,13 +1,14 @@
 // Copyright (C) 2016 Sergey Akopkokhyants
 // This project is licensed under the terms of the MIT license.
 // https://github.com/akserg/ng2-toasty
-import { Component, Input } from '@angular/core';
-import { isFunction } from './toasty.utils';
-import { ToastyService, ToastyConfig } from './toasty.service';
+"use strict";
+var core_1 = require('@angular/core');
+var toasty_utils_1 = require('./toasty.utils');
+var toasty_service_1 = require('./toasty.service');
 /**
  * Toasty is container for Toast components
  */
-export var ToastyComponent = (function () {
+var ToastyComponent = (function () {
     function ToastyComponent(config, toastyService) {
         this.config = config;
         this.toastyService = toastyService;
@@ -99,7 +100,7 @@ export var ToastyComponent = (function () {
         if (id) {
             this.toasts.forEach(function (value, key) {
                 if (value.id === id) {
-                    if (value.onRemove && isFunction(value.onRemove)) {
+                    if (value.onRemove && toasty_utils_1.isFunction(value.onRemove)) {
                         value.onRemove.call(_this, value);
                     }
                     _this.toasts.splice(key, 1);
@@ -116,7 +117,7 @@ export var ToastyComponent = (function () {
     ToastyComponent.prototype.clearAll = function () {
         var _this = this;
         this.toasts.forEach(function (value, key) {
-            if (value.onRemove && isFunction(value.onRemove)) {
+            if (value.onRemove && toasty_utils_1.isFunction(value.onRemove)) {
                 value.onRemove.call(_this, value);
             }
         });
@@ -136,19 +137,19 @@ export var ToastyComponent = (function () {
      */
     ToastyComponent.POSITIONS = ['bottom-right', 'bottom-left', 'top-right', 'top-left', 'top-center', 'bottom-center', 'center-center'];
     ToastyComponent.decorators = [
-        { type: Component, args: [{
+        { type: core_1.Component, args: [{
                     selector: 'ng2-toasty',
                     template: "\n    <div id=\"toasty\" [ngClass]=\"[position]\">\n        <ng2-toast *ngFor=\"let toast of toasts\" [toast]=\"toast\" (closeToast)=\"closeToast(toast)\"></ng2-toast>\n    </div>"
                 },] },
     ];
     /** @nocollapse */
     ToastyComponent.ctorParameters = [
-        { type: ToastyConfig, },
-        { type: ToastyService, },
+        { type: toasty_service_1.ToastyConfig, },
+        { type: toasty_service_1.ToastyService, },
     ];
     ToastyComponent.propDecorators = {
-        'position': [{ type: Input },],
+        'position': [{ type: core_1.Input },],
     };
     return ToastyComponent;
 }());
-//# sourceMappingURL=toasty.component.js.map
+exports.ToastyComponent = ToastyComponent;

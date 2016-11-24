@@ -1,5 +1,6 @@
-import { TestBed } from '@angular/core/testing';
-import { ToastComponent } from '../src/toast.component';
+"use strict";
+var testing_1 = require('@angular/core/testing');
+var toast_component_1 = require('../src/toast.component');
 describe('ToastComponent', function () {
     var componentFixture;
     var toast = {
@@ -15,13 +16,13 @@ describe('ToastComponent', function () {
         onClick: null
     };
     beforeEach(function () {
-        TestBed.configureTestingModule({
-            declarations: [ToastComponent]
+        testing_1.TestBed.configureTestingModule({
+            declarations: [toast_component_1.ToastComponent]
         });
-        TestBed.compileComponents();
+        testing_1.TestBed.compileComponents();
     });
     beforeEach(function () {
-        componentFixture = TestBed.createComponent(ToastComponent);
+        componentFixture = testing_1.TestBed.createComponent(toast_component_1.ToastComponent);
         componentFixture.componentInstance.toast = toast;
         componentFixture.detectChanges();
     });
@@ -82,4 +83,3 @@ describe('ToastComponent', function () {
         componentFixture.componentInstance.toast.msg = null;
     });
 });
-//# sourceMappingURL=toast.component.spec.js.map

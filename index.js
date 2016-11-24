@@ -2,35 +2,39 @@
 // This project is licensed under the terms of the MIT license.
 // https://github.com/akserg/ng2-toasty
 'use strict';
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-export * from './src/toasty.service';
-export * from './src/toasty.component';
-import { ToastyComponent } from './src/toasty.component';
-import { ToastComponent } from './src/toast.component';
-import { ToastyConfig, ToastyService } from './src/toasty.service';
-export default {
-    providers: [ToastyConfig, ToastyService],
-    directives: [ToastyComponent, ToastComponent]
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+__export(require('./src/toasty.service'));
+__export(require('./src/toasty.component'));
+var toasty_component_2 = require('./src/toasty.component');
+var toast_component_1 = require('./src/toast.component');
+var toasty_service_2 = require('./src/toasty.service');
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    providers: [toasty_service_2.ToastyConfig, toasty_service_2.ToastyService],
+    directives: [toasty_component_2.ToastyComponent, toast_component_1.ToastComponent]
 };
-export var ToastyModule = (function () {
+var ToastyModule = (function () {
     function ToastyModule() {
     }
     ToastyModule.forRoot = function () {
         return {
             ngModule: ToastyModule,
-            providers: [ToastyConfig, ToastyService]
+            providers: [toasty_service_2.ToastyConfig, toasty_service_2.ToastyService]
         };
     };
     ToastyModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [CommonModule],
-                    declarations: [ToastComponent, ToastyComponent],
-                    exports: [ToastComponent, ToastyComponent]
+        { type: core_1.NgModule, args: [{
+                    imports: [common_1.CommonModule],
+                    declarations: [toast_component_1.ToastComponent, toasty_component_2.ToastyComponent],
+                    exports: [toast_component_1.ToastComponent, toasty_component_2.ToastyComponent]
                 },] },
     ];
     /** @nocollapse */
     ToastyModule.ctorParameters = [];
     return ToastyModule;
 }());
-//# sourceMappingURL=index.js.map
+exports.ToastyModule = ToastyModule;
