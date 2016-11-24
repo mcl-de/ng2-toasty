@@ -10,8 +10,5 @@
         "suppressImplicitAnyIndexErrors": true,
         "sourceMap": false,
         "declaration": true
-    },
-    "angularCompilerOptions": {
-        "skipMetadataEmit" : true
     }
 }
