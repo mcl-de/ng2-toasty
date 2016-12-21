@@ -6,10 +6,10 @@
 import * as import0 from './toast.component';
 import * as import2 from '@angular/core/src/linker/view';
 import * as import3 from '@angular/core/src/linker/view_utils';
-import * as import7 from '@angular/core/src/linker/component_factory';
-import * as import8 from '../node_modules/@angular/common/src/directives/ng_class.ngfactory';
-import * as import9 from '@angular/core/src/linker/view_container';
-import * as import10 from '../node_modules/@angular/common/src/directives/ng_if.ngfactory';
+import * as import8 from '@angular/core/src/linker/component_factory';
+import * as import9 from '../node_modules/@angular/common/src/directives/ng_class.ngfactory';
+import * as import10 from '@angular/core/src/linker/view_container';
+import * as import11 from '../node_modules/@angular/common/src/directives/ng_if.ngfactory';
 export declare class Wrapper_ToastComponent {
     _eventHandler: Function;
     context: import0.ToastComponent;
@@ -25,25 +25,25 @@ export declare class Wrapper_ToastComponent {
     handleEvent(eventName: string, $event: any): boolean;
     subscribe(view: import2.AppView<any>, _eventHandler: any, emit0: boolean): void;
 }
-export declare const ToastComponentNgFactory: import7.ComponentFactory<import0.ToastComponent>;
+export declare const ToastComponentNgFactory: import8.ComponentFactory<import0.ToastComponent>;
 export declare class View_ToastComponent0 extends import2.AppView<import0.ToastComponent> {
     _text_0: any;
     _el_1: any;
-    _NgClass_1_3: import8.Wrapper_NgClass;
+    _NgClass_1_3: import9.Wrapper_NgClass;
     _text_2: any;
     _anchor_3: any;
-    _vc_3: import9.ViewContainer;
+    _vc_3: import10.ViewContainer;
     _TemplateRef_3_5: any;
-    _NgIf_3_6: import10.Wrapper_NgIf;
+    _NgIf_3_6: import11.Wrapper_NgIf;
     _text_4: any;
     _anchor_5: any;
-    _vc_5: import9.ViewContainer;
+    _vc_5: import10.ViewContainer;
     _TemplateRef_5_5: any;
-    _NgIf_5_6: import10.Wrapper_NgIf;
+    _NgIf_5_6: import11.Wrapper_NgIf;
     _text_6: any;
     _arr_14: any;
     constructor(viewUtils: import3.ViewUtils, parentView: import2.AppView<any>, parentIndex: number, parentElement: any);
-    createInternal(rootSelector: string): import7.ComponentRef<any>;
+    createInternal(rootSelector: string): import8.ComponentRef<any>;
     injectorGetInternal(token: any, requestNodeIndex: number, notFoundResult: any): any;
     detectChangesInternal(throwOnChange: boolean): void;
     destroyInternal(): void;

@@ -143,10 +143,10 @@ var ToastyComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    ToastyComponent.ctorParameters = [
+    ToastyComponent.ctorParameters = function () { return [
         { type: toasty_service_1.ToastyConfig, },
         { type: toasty_service_1.ToastyService, },
-    ];
+    ]; };
     ToastyComponent.propDecorators = {
         'position': [{ type: core_1.Input },],
     };

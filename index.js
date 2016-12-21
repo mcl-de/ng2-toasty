@@ -34,7 +34,7 @@ var ToastyModule = (function () {
                 },] },
     ];
     /** @nocollapse */
-    ToastyModule.ctorParameters = [];
+    ToastyModule.ctorParameters = function () { return []; };
     return ToastyModule;
 }());
 exports.ToastyModule = ToastyModule;

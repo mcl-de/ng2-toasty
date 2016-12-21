@@ -11,24 +11,25 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var import0 = require('./toasty.component');
-var import1 = require('@angular/core/src/change_detection/change_detection');
+var import1 = require('@angular/core/src/change_detection/change_detection_util');
 var import2 = require('@angular/core/src/linker/view');
 var import3 = require('@angular/core/src/linker/view_utils');
 var import5 = require('@angular/core/src/metadata/view');
 var import6 = require('@angular/core/src/linker/view_type');
-var import7 = require('@angular/core/src/linker/component_factory');
-var import8 = require('./toasty.service');
-var import9 = require('../node_modules/@angular/common/src/directives/ng_class.ngfactory');
-var import10 = require('@angular/core/src/linker/view_container');
-var import11 = require('../node_modules/@angular/common/src/directives/ng_for.ngfactory');
-var import12 = require('@angular/core/src/change_detection/differs/iterable_differs');
-var import13 = require('@angular/core/src/change_detection/differs/keyvalue_differs');
-var import14 = require('@angular/core/src/linker/element_ref');
-var import15 = require('@angular/core/src/linker/template_ref');
-var import16 = require('@angular/common/src/directives/ng_for');
-var import17 = require('@angular/common/src/directives/ng_class');
-var import18 = require('./toast.component');
-var import19 = require('./toast.component.ngfactory');
+var import7 = require('@angular/core/src/change_detection/constants');
+var import8 = require('@angular/core/src/linker/component_factory');
+var import9 = require('./toasty.service');
+var import10 = require('../node_modules/@angular/common/src/directives/ng_class.ngfactory');
+var import11 = require('@angular/core/src/linker/view_container');
+var import12 = require('../node_modules/@angular/common/src/directives/ng_for.ngfactory');
+var import13 = require('@angular/core/src/change_detection/differs/iterable_differs');
+var import14 = require('@angular/core/src/change_detection/differs/keyvalue_differs');
+var import15 = require('@angular/core/src/linker/element_ref');
+var import16 = require('@angular/core/src/linker/template_ref');
+var import17 = require('@angular/common/src/directives/ng_for');
+var import18 = require('@angular/common/src/directives/ng_class');
+var import19 = require('./toast.component');
+var import20 = require('./toast.component.ngfactory');
 var Wrapper_ToastyComponent = (function () {
     function Wrapper_ToastyComponent(p0, p1) {
         this._changed = false;
@@ -72,15 +73,15 @@ var renderType_ToastyComponent_Host = import3.createRenderComponentType('', 0, i
 var View_ToastyComponent_Host0 = (function (_super) {
     __extends(View_ToastyComponent_Host0, _super);
     function View_ToastyComponent_Host0(viewUtils, parentView, parentIndex, parentElement) {
-        _super.call(this, View_ToastyComponent_Host0, renderType_ToastyComponent_Host, import6.ViewType.HOST, viewUtils, parentView, parentIndex, parentElement, import1.ChangeDetectorStatus.CheckAlways);
+        _super.call(this, View_ToastyComponent_Host0, renderType_ToastyComponent_Host, import6.ViewType.HOST, viewUtils, parentView, parentIndex, parentElement, import7.ChangeDetectorStatus.CheckAlways);
     }
     View_ToastyComponent_Host0.prototype.createInternal = function (rootSelector) {
         this._el_0 = import3.selectOrCreateRenderHostElement(this.renderer, 'ng2-toasty', import3.EMPTY_INLINE_ARRAY, rootSelector, null);
         this.compView_0 = new View_ToastyComponent0(this.viewUtils, this, 0, this._el_0);
-        this._ToastyComponent_0_3 = new Wrapper_ToastyComponent(this.injectorGet(import8.ToastyConfig, this.parentIndex), this.injectorGet(import8.ToastyService, this.parentIndex));
+        this._ToastyComponent_0_3 = new Wrapper_ToastyComponent(this.injectorGet(import9.ToastyConfig, this.parentIndex), this.injectorGet(import9.ToastyService, this.parentIndex));
         this.compView_0.create(this._ToastyComponent_0_3.context);
         this.init(this._el_0, (this.renderer.directRenderer ? null : [this._el_0]), null);
-        return new import7.ComponentRef_(0, this, this._el_0, this._ToastyComponent_0_3.context);
+        return new import8.ComponentRef_(0, this, this._el_0, this._ToastyComponent_0_3.context);
     };
     View_ToastyComponent_Host0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
         if (((token === import0.ToastyComponent) && (0 === requestNodeIndex))) {
@@ -90,7 +91,7 @@ var View_ToastyComponent_Host0 = (function (_super) {
     };
     View_ToastyComponent_Host0.prototype.detectChangesInternal = function (throwOnChange) {
         this._ToastyComponent_0_3.ngDoCheck(this, this._el_0, throwOnChange);
-        this.compView_0.detectChanges(throwOnChange);
+        this.compView_0.internalDetectChanges(throwOnChange);
     };
     View_ToastyComponent_Host0.prototype.destroyInternal = function () {
         this.compView_0.destroy();
@@ -100,13 +101,13 @@ var View_ToastyComponent_Host0 = (function (_super) {
     };
     return View_ToastyComponent_Host0;
 }(import2.AppView));
-exports.ToastyComponentNgFactory = new import7.ComponentFactory('ng2-toasty', View_ToastyComponent_Host0, import0.ToastyComponent);
+exports.ToastyComponentNgFactory = new import8.ComponentFactory('ng2-toasty', View_ToastyComponent_Host0, import0.ToastyComponent);
 var styles_ToastyComponent = [];
 var renderType_ToastyComponent = import3.createRenderComponentType('', 0, import5.ViewEncapsulation.None, styles_ToastyComponent, {});
 var View_ToastyComponent0 = (function (_super) {
     __extends(View_ToastyComponent0, _super);
     function View_ToastyComponent0(viewUtils, parentView, parentIndex, parentElement) {
-        _super.call(this, View_ToastyComponent0, renderType_ToastyComponent, import6.ViewType.COMPONENT, viewUtils, parentView, parentIndex, parentElement, import1.ChangeDetectorStatus.CheckAlways);
+        _super.call(this, View_ToastyComponent0, renderType_ToastyComponent, import6.ViewType.COMPONENT, viewUtils, parentView, parentIndex, parentElement, import7.ChangeDetectorStatus.CheckAlways);
         this._arr_9 = import3.pureProxy1(function (p0) {
             return [p0];
         });
@@ -115,12 +116,12 @@ var View_ToastyComponent0 = (function (_super) {
         var parentRenderNode = this.renderer.createViewRoot(this.parentElement);
         this._text_0 = this.renderer.createText(parentRenderNode, '\n    ', null);
         this._el_1 = import3.createRenderElement(this.renderer, parentRenderNode, 'div', new import3.InlineArray2(2, 'id', 'toasty'), null);
-        this._NgClass_1_3 = new import9.Wrapper_NgClass(this.parentView.injectorGet(import12.IterableDiffers, this.parentIndex), this.parentView.injectorGet(import13.KeyValueDiffers, this.parentIndex), new import14.ElementRef(this._el_1), this.renderer);
+        this._NgClass_1_3 = new import10.Wrapper_NgClass(this.parentView.injectorGet(import13.IterableDiffers, this.parentIndex), this.parentView.injectorGet(import14.KeyValueDiffers, this.parentIndex), new import15.ElementRef(this._el_1), this.renderer);
         this._text_2 = this.renderer.createText(this._el_1, '\n        ', null);
         this._anchor_3 = this.renderer.createTemplateAnchor(this._el_1, null);
-        this._vc_3 = new import10.ViewContainer(3, 1, this, this._anchor_3);
-        this._TemplateRef_3_5 = new import15.TemplateRef_(this, 3, this._anchor_3);
-        this._NgFor_3_6 = new import11.Wrapper_NgFor(this._vc_3.vcRef, this._TemplateRef_3_5, this.parentView.injectorGet(import12.IterableDiffers, this.parentIndex), this.ref);
+        this._vc_3 = new import11.ViewContainer(3, 1, this, this._anchor_3);
+        this._TemplateRef_3_5 = new import16.TemplateRef_(this, 3, this._anchor_3);
+        this._NgFor_3_6 = new import12.Wrapper_NgFor(this._vc_3.vcRef, this._TemplateRef_3_5, this.parentView.injectorGet(import13.IterableDiffers, this.parentIndex), this.ref);
         this._text_4 = this.renderer.createText(this._el_1, '\n    ', null);
         this.init(null, (this.renderer.directRenderer ? null : [
             this._text_0,
@@ -132,13 +133,13 @@ var View_ToastyComponent0 = (function (_super) {
         return null;
     };
     View_ToastyComponent0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import15.TemplateRef) && (3 === requestNodeIndex))) {
+        if (((token === import16.TemplateRef) && (3 === requestNodeIndex))) {
             return this._TemplateRef_3_5;
         }
-        if (((token === import16.NgFor) && (3 === requestNodeIndex))) {
+        if (((token === import17.NgFor) && (3 === requestNodeIndex))) {
             return this._NgFor_3_6.context;
         }
-        if (((token === import17.NgClass) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 4)))) {
+        if (((token === import18.NgClass) && ((1 <= requestNodeIndex) && (requestNodeIndex <= 4)))) {
             return this._NgClass_1_3.context;
         }
         return notFoundResult;
@@ -167,12 +168,12 @@ exports.View_ToastyComponent0 = View_ToastyComponent0;
 var View_ToastyComponent1 = (function (_super) {
     __extends(View_ToastyComponent1, _super);
     function View_ToastyComponent1(viewUtils, parentView, parentIndex, parentElement, declaredViewContainer) {
-        _super.call(this, View_ToastyComponent1, renderType_ToastyComponent, import6.ViewType.EMBEDDED, viewUtils, parentView, parentIndex, parentElement, import1.ChangeDetectorStatus.CheckAlways, declaredViewContainer);
+        _super.call(this, View_ToastyComponent1, renderType_ToastyComponent, import6.ViewType.EMBEDDED, viewUtils, parentView, parentIndex, parentElement, import7.ChangeDetectorStatus.CheckAlways, declaredViewContainer);
     }
     View_ToastyComponent1.prototype.createInternal = function (rootSelector) {
         this._el_0 = import3.createRenderElement(this.renderer, null, 'ng2-toast', import3.EMPTY_INLINE_ARRAY, null);
-        this.compView_0 = new import19.View_ToastComponent0(this.viewUtils, this, 0, this._el_0);
-        this._ToastComponent_0_3 = new import19.Wrapper_ToastComponent();
+        this.compView_0 = new import20.View_ToastComponent0(this.viewUtils, this, 0, this._el_0);
+        this._ToastComponent_0_3 = new import20.Wrapper_ToastComponent();
         this.compView_0.create(this._ToastComponent_0_3.context);
         var disposable_0 = import3.subscribeToRenderElement(this, this._el_0, new import3.InlineArray2(2, 'closeToast', null), this.eventHandler(this.handleEvent_0));
         this._ToastComponent_0_3.subscribe(this, this.eventHandler(this.handleEvent_0), true);
@@ -180,7 +181,7 @@ var View_ToastyComponent1 = (function (_super) {
         return null;
     };
     View_ToastyComponent1.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import18.ToastComponent) && (0 === requestNodeIndex))) {
+        if (((token === import19.ToastComponent) && (0 === requestNodeIndex))) {
             return this._ToastComponent_0_3.context;
         }
         return notFoundResult;
@@ -189,7 +190,7 @@ var View_ToastyComponent1 = (function (_super) {
         var currVal_0_0_0 = this.context.$implicit;
         this._ToastComponent_0_3.check_toast(currVal_0_0_0, throwOnChange, false);
         this._ToastComponent_0_3.ngDoCheck(this, this._el_0, throwOnChange);
-        this.compView_0.detectChanges(throwOnChange);
+        this.compView_0.internalDetectChanges(throwOnChange);
     };
     View_ToastyComponent1.prototype.destroyInternal = function () {
         this.compView_0.destroy();

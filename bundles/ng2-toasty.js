@@ -58,7 +58,9 @@ System.registerDynamic('src/toasty.service', ['@angular/core', './toasty.utils']
         }
         ToastyConfig.decorators = [{ type: core_1.Injectable }];
         /** @nocollapse */
-        ToastyConfig.ctorParameters = [];
+        ToastyConfig.ctorParameters = function () {
+            return [];
+        };
         return ToastyConfig;
     }();
     exports.ToastyConfig = ToastyConfig;
@@ -194,7 +196,9 @@ System.registerDynamic('src/toasty.service', ['@angular/core', './toasty.utils']
         ToastyService.THEMES = ['default', 'material', 'bootstrap'];
         ToastyService.decorators = [{ type: core_1.Injectable }];
         /** @nocollapse */
-        ToastyService.ctorParameters = [{ type: ToastyConfig }];
+        ToastyService.ctorParameters = function () {
+            return [{ type: ToastyConfig }];
+        };
         return ToastyService;
     }();
     exports.ToastyService = ToastyService;
@@ -346,7 +350,9 @@ System.registerDynamic('src/toasty.component', ['@angular/core', './toasty.utils
                 template: "\n    <div id=\"toasty\" [ngClass]=\"[position]\">\n        <ng2-toast *ngFor=\"let toast of toasts\" [toast]=\"toast\" (closeToast)=\"closeToast(toast)\"></ng2-toast>\n    </div>"
             }] }];
         /** @nocollapse */
-        ToastyComponent.ctorParameters = [{ type: toasty_service_1.ToastyConfig }, { type: toasty_service_1.ToastyService }];
+        ToastyComponent.ctorParameters = function () {
+            return [{ type: toasty_service_1.ToastyConfig }, { type: toasty_service_1.ToastyService }];
+        };
         ToastyComponent.propDecorators = {
             'position': [{ type: core_1.Input }]
         };
@@ -382,10 +388,12 @@ System.registerDynamic('src/toast.component', ['@angular/core'], true, function 
         };
         ToastComponent.decorators = [{ type: core_1.Component, args: [{
                 selector: 'ng2-toast',
-                template: "\n        <div class=\"toast\" [ngClass]=\"[toast.type, toast.theme]\">\n            <div *ngIf=\"toast.showClose\" class=\"close-button\" (click)=\"close($event)\"></div>\n            <div *ngIf=\"toast.title || toast.msg\" class=\"toast-text\">\n                <span *ngIf=\"toast.title\" class=\"toast-title\">{{toast.title}}</span>\n                <br *ngIf=\"toast.title && toast.msg\" />\n                <span *ngIf=\"toast.msg\" class=\"toast-msg\">{{toast.msg}}</span>\n            </div>\n        </div>"
+                template: "\n        <div class=\"toast\" [ngClass]=\"[toast.type, toast.theme]\">\n            <div *ngIf=\"toast.showClose\" class=\"close-button\" (click)=\"close($event)\"></div>\n            <div *ngIf=\"toast.title || toast.msg\" class=\"toast-text\">\n                <span *ngIf=\"toast.title\" class=\"toast-title\" [innerHTML]=\"toast.title\"></span>\n                <br *ngIf=\"toast.title && toast.msg\" />\n                <span *ngIf=\"toast.msg\" class=\"toast-msg\" [innerHTML]=\"toast.msg\"></span>\n            </div>\n        </div>"
             }] }];
         /** @nocollapse */
-        ToastComponent.ctorParameters = [];
+        ToastComponent.ctorParameters = function () {
+            return [];
+        };
         ToastComponent.propDecorators = {
             'toast': [{ type: core_1.Input }],
             'closeToastEvent': [{ type: core_1.Output, args: ['closeToast'] }]
@@ -433,7 +441,9 @@ System.registerDynamic("index", ["@angular/core", "@angular/common", "./src/toas
                 exports: [toast_component_1.ToastComponent, toasty_component_2.ToastyComponent]
             }] }];
         /** @nocollapse */
-        ToastyModule.ctorParameters = [];
+        ToastyModule.ctorParameters = function () {
+            return [];
+        };
         return ToastyModule;
     }();
     exports.ToastyModule = ToastyModule;

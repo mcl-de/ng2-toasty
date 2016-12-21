@@ -26,7 +26,7 @@ var ToastyConfig = (function () {
         { type: core_1.Injectable },
     ];
     /** @nocollapse */
-    ToastyConfig.ctorParameters = [];
+    ToastyConfig.ctorParameters = function () { return []; };
     return ToastyConfig;
 }());
 exports.ToastyConfig = ToastyConfig;
@@ -168,9 +168,9 @@ var ToastyService = (function () {
         { type: core_1.Injectable },
     ];
     /** @nocollapse */
-    ToastyService.ctorParameters = [
+    ToastyService.ctorParameters = function () { return [
         { type: ToastyConfig, },
-    ];
+    ]; };
     return ToastyService;
 }());
 exports.ToastyService = ToastyService;

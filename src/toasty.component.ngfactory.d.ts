@@ -6,10 +6,10 @@
 import * as import0 from './toasty.component';
 import * as import2 from '@angular/core/src/linker/view';
 import * as import3 from '@angular/core/src/linker/view_utils';
-import * as import7 from '@angular/core/src/linker/component_factory';
-import * as import9 from '../node_modules/@angular/common/src/directives/ng_class.ngfactory';
-import * as import10 from '@angular/core/src/linker/view_container';
-import * as import11 from '../node_modules/@angular/common/src/directives/ng_for.ngfactory';
+import * as import8 from '@angular/core/src/linker/component_factory';
+import * as import10 from '../node_modules/@angular/common/src/directives/ng_class.ngfactory';
+import * as import11 from '@angular/core/src/linker/view_container';
+import * as import12 from '../node_modules/@angular/common/src/directives/ng_for.ngfactory';
 export declare class Wrapper_ToastyComponent {
     _eventHandler: Function;
     context: import0.ToastyComponent;
@@ -24,20 +24,20 @@ export declare class Wrapper_ToastyComponent {
     handleEvent(eventName: string, $event: any): boolean;
     subscribe(view: import2.AppView<any>, _eventHandler: any): void;
 }
-export declare const ToastyComponentNgFactory: import7.ComponentFactory<import0.ToastyComponent>;
+export declare const ToastyComponentNgFactory: import8.ComponentFactory<import0.ToastyComponent>;
 export declare class View_ToastyComponent0 extends import2.AppView<import0.ToastyComponent> {
     _text_0: any;
     _el_1: any;
-    _NgClass_1_3: import9.Wrapper_NgClass;
+    _NgClass_1_3: import10.Wrapper_NgClass;
     _text_2: any;
     _anchor_3: any;
-    _vc_3: import10.ViewContainer;
+    _vc_3: import11.ViewContainer;
     _TemplateRef_3_5: any;
-    _NgFor_3_6: import11.Wrapper_NgFor;
+    _NgFor_3_6: import12.Wrapper_NgFor;
     _text_4: any;
     _arr_9: any;
     constructor(viewUtils: import3.ViewUtils, parentView: import2.AppView<any>, parentIndex: number, parentElement: any);
-    createInternal(rootSelector: string): import7.ComponentRef<any>;
+    createInternal(rootSelector: string): import8.ComponentRef<any>;
     injectorGetInternal(token: any, requestNodeIndex: number, notFoundResult: any): any;
     detectChangesInternal(throwOnChange: boolean): void;
     destroyInternal(): void;
