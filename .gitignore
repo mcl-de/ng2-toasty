@@ -11,6 +11,8 @@ coverage
 dist
 typings
 _test-output
+src/*.*.ngsummary.json
+index.ngsummary.json
 
 #################
 ## JetBrains
